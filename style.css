@@ -12,12 +12,43 @@
 .text h1{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
+.background .clouds img#cloud1{
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    width: 150px;
+    animation: cloud 3s infinite  linear;
+    z-index: 1;
+}
+.background .clouds img#cloud2{
+    position: absolute;
+    top: 10px;
+    width: 100px;
+    animation: cloudtwo 7s infinite  linear ;
+    z-index: 1;
+}
+.background .sun img{
+    position: absolute;
+    width: 60px;
+    top: 0;
+    left: 100px;
+    z-index: 0;
+}
+@keyframes cloud{
+    0%{left: 480px;}
+    100%{left: -40px;}
+}
+@keyframes cloudtwo{
+    0%{left: 480px;}
+    100%{left: -40px;}
+}
 #charactergame img{
     width: 40px;
     height: 50px;
     position: relative;
     top: 150px;
     left: 20px;
+    z-index: 1;
 }
 .animate{
     animation: jump 500ms ;
@@ -33,7 +64,7 @@
 
 @keyframes block{
     0%{left:480px;}
-    100%{left:-40px}
+    100%{left:-1px}
 }
 
 @keyframes jump{
@@ -54,6 +85,11 @@
 }
 .startbtn h2{
     padding: 5px;
+}
+.score{
+    position: absolute;
+    top: 400px;
+    left: 50px;
 }
 .overtxt {
     position: relative;

@@ -8,6 +8,7 @@ function jump(){
     setTimeout(function(){
         character.classList.remove("animate")
     },500);
+    play();
 }
 
 var checkDead = setInterval(function(){
@@ -17,7 +18,9 @@ var checkDead = setInterval(function(){
     if(blockLeft<20 && blockLeft>0 && characterTop>=130){
         block.style.animation = "none";
         character.style.display="none";
-        block.style.display="none;"
+        block.style.display="none";
+        playStop();
+        endsound();
         overtxt = "Ayyohh Kallooooo!!";
         document.getElementById('overtxt').innerHTML= overtxt;
     }
@@ -25,4 +28,17 @@ var checkDead = setInterval(function(){
 
 function start(){
     location.reload();
+}
+
+
+function play() {
+    var audio = document.getElementById("audio");
+    audio.play();
+}
+function playStop(){
+    audio.pause();
+}
+function endsound(){
+    var catsound = document.getElementById("catsound");
+    catsound.play();
 }
